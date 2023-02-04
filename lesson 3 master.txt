@@ -1,0 +1,120 @@
+  GIT LOCAL COMMAND
+# git init
+#git status
+#git add.
+#git rm --cached - to remove file from staging area 
+	back to local directory
+create remote repo in github.com
+ create new repo and copy #git remote add origin https>>>>
+
+ to push the file from local depo to remote repo
+ using upstream practice
+ command:
+#git puch -u origin master ( move file from local to remote repo)
+
+ Refresh remote repo and you see index file from local depo 
+to remote repo.
+
+################################################################
+
+			BRANCHING
+#####################################################################
+
+branches are created from master branch 
+so developers can work sololy in a private enviroment.
+ when a devop complete a task on a branch, they can marge the branch with
+master branch with help og gitmerge or gitrebase
+
+	when the branch is marge a new commet/commit will create.
+No one works in the master branch to avoid mistakes
+ branch command
+
+#git branch( branch we working on)-- * means currect "branch
+#git branch branch 1( it creates branch with mani(master branch) 
+   (git branch show you all the branch)
+
+#git checkout branch1( will take you to branch1)git
+#git checkout master( will take you to master branch)
+
+
+#touch created inbranch1.txt ( this will create file in branch1 folder)
+# git checkout master( this command take you inside master branch)
+  the file created in branch1 will not be generated in master branch
+
+##### create branch1 in github
+view all branch and select new branch n enter your bran
+
+how to create two commit and merge it to master 
+
+create files in master and branch1 and use command
+#git marge branch1 ( green screen will pop up)
+#press i and update information
+press esc :wq to leave the green pagae
+
+ you will see change both file in master and branch1 folder
+
+#git revert will delete the 
+
+
+######################################################################
+			MERGE AND REBASE
+merge is not easy to read
+rebase creates a clean branch and easy to read
+
+when you dont want the team to see the branches 
+developer can use rebase  concept to hide the branches.
+    			command for rebase
+ #git branch branch2
+    create file1 and file2  in branch2
+#git checckout master ( take you into master branch)
+   all the commit in branch2 will not be in master branch.
+#git log --oneline --graph( to see the graphic table) 
+
+################################################################
+ how to create rebase (commands)
+
+#git branch branchrebase
+#git branchrebase( enter branchrebase)
+#touch filecreatedinbranchrebase.txt
+#git add .  >git commit -m"first file created in branchrebase
+#git checkout master ( enter master)
+#touch ( create file in master)
+#you can only create branches or rebase from master branch
+
+#git checkout master
+git rebase branchrebase
+#git log --oneline --graph
+
+#########################################################################
+ MERGE CONFLICT
+##############################################################
+
+two developers working one one project
+p1 working on branch 1
+p2 working on branch2
+p1 update file 1
+p2 also updated the same file 
+p1 merged file with master
+p2 merged the same file to master but error message 
+file already exist in master
+( github doesnt know what file is correct all it know is this 
+file already be updated in the github data
+
+both dont knw what files they working on
+so wht we trying to do here is to make sure both 
+developer dont work on the same file
+  HOW TO RESOLVE ERROR
+ p1 and p2 will have meeting to resolve conflict
+
+COOMAND TO RESOLVE COFLICT
+ #git b b5
+ create a file( txt with diff content) in branch5 and 
+ create the same exact file( txt with another content) in master
+ #git merger branch to master> error meassage of merge failed
+   fix conflict will appear
+Conflict both branches have the same fill 
+
+both developer will come together and manully correct the file 
+ #git add .
+ #git commit -m"resoved issue"
+this resolved the conflict issues.
