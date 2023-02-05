@@ -1,0 +1,119 @@
+LESSON 4
+jenkins is the most important part
+what is jenkins:  is a waiter( is an automation tool)
+         waiter is automating the steps a custer has to do manully ( from taking order to bringing food, to check all that is done by waiter by automating the process for customer
+JENKIN : automate SDLC ---> developer put code in github.com --.jenkin picked up code from github.com --->> to maven (build)-->>> test (building is succefful so test--if something wrong with the code (jenkin will infor the developer to fix before going to QA) ----->>QA---->to delievery)           
+competitor of jenkin
+travis, CI cicrcle, Bamboo, gatelab 
+jenkin is open source tool meaning is free, it works with all kind of operating system
+jenkin : automate complete SDLC
+LUNCH jenkins 
+vidoe link how : vimeo.com/697836338
+JDK 8,11 : add enviroment variables
+github          steps to lunch Jenkinsbcv
+maven
+jenkins
+how to lunch instances : go to aws selete EC2 and click on instance
+---> create ec2 name , select windows and create key pair  , scroll and click 
+---->allow HTTP tracffic -----------> allow Http
+connect your instance using RDP clicnt --->>>> generate password----->>>> select the download remote machine and 
+lunch remote window
+----> click on window and select server manager
+ ----->>>>click local server ---->>> turn off IE enhancement
+----------->>>download chrome cuz jenkin will not run with internete expl
+
+first step to lunch jenskin 
+--->install git for windown ( you must do this steps for every new project to set up jenkin in a new server)
+--->> select git pack and click on 64 git for window
+---->>>>run git and click next next n install
+---------------------------------------------
+second step install java package 11
+ install 64 git and it will direct you to a log in acc
+create new acc is free and confirm your email nad it will dirct
+ check ur system to see that java is completely install
+----->> go to file--->>this pc--->local dick-->>program file-->.java---->> jdk11.
+
+   for jenkins to run it request JDK11 (java) to be installed
+ENviroment variable next step -- to acknowlege jenkin jave is running
+   
+		 SET UP ENVIROMENT VARAIBLES
+---->>>
+ search enviroment variable  --->> click on enviroment variable
+creat variable for user and system
+-----> create new vavriable (Variable name and add link)
+excutable file will be avalable in bin
+---->>> double click on path in system variable and 
+     add exec bin C:\Program Files\Java\jdk-11.0.17\bin
+NEXT STEP
+
+INSTALL MAVEN
+
+google and enter intall maven and click the first site
+click on download and select
+	binary zip archive   -  apaches-maven
+	downlaod apache ---> go to file 
+	copy and paste on PC drive(c drive)
+ next add apache to enviroment variable to both user and system
+ 
+	  add path apach/bin Final step downlaod jenkin
+  # jenkins download and delopyment
+    scrool and download windowns
+  next jenkin run on a poll 8080
+code 8080 need to be enable in the ec2 /window machine
+---->. go aws ec2 machine
+----->select machine and click on security
+------.click on security group
+-------> select edit inbound rules
+--------> add code 8080 n select public and save
+
+NEXT STEP
+
+INSTALL MAVEN
+
+google and enter intall maven and click the first site
+click on download and select
+	binary zip archive   -  apaches-maven
+	downlaod apache ---> go to file 
+	copy and paste on PC drive(c drive)
+ next add apache to enviroment variable to both user and system
+ 
+	  add path apach/bin Final step downlaod jenkin
+  # jenkins download and delopyment
+    scrool and download windowns
+  next jenkin run on a poll 8080
+code 8080 need to be enable in the ec2 /window machine
+---->. go aws ec2 machine
+----->select machine and click on security
+------.click on security group
+-------> select edit inbound rules
+--------> add code 8080 n select anywhere and save
+next-------> search locahost 8080
+-----> unclock jenkins / admin passwd page pop up
+--------->copy link and past in file and open fold and copy
+------> passward n paste on jenkin page
+next step
+-------> creat user name
+
+HOW WE ARE INSIDE JENKIN
+ you can change a user name in jenkin from config
+
+first step
+----> select manage jenkin
+----> click global tool configuratio
+
+first add JDK ( add any name)
+add java (copy the lick from file)C:\Program Files\Java\jdk-11.0.17
+ 
+second add Maven (copy link : apache )C:\apache-maven-3.8.7
+and save 
+GLOBAL TOOL CONTIG: are tools requested when you build a project in jenkins
+
+Click new 
+ enter project name and select freestyle project
+
+poll scm -notify jenkin of any update in github
+go to build create a job in excute windonw
+go t build add comment and save( echo is a command)
+ go to console output to see the error message 
+manage jenkine------> plugin manager
+ install maven plugin
